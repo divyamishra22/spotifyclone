@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { StateContext } from './contextapi/Stateprovider';
-import reducer, { initialState } from './contextapi/Reducers';
+import { StateContext, dispatch, state } from './contextapi/Stateprovider.tsx';
+import reducer, { initialState } from './contextapi/Reducers.ts';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
  
-    <StateContext.Provider value= {{initialState,reducer}}>
+    <StateProvider>
     <App />
-    </StateContext.Provider>
+    </StateProvider>
   
 );
 
