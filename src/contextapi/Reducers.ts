@@ -1,4 +1,4 @@
-import { reducerCases } from "./Constants.ts";
+import { reducerCases } from "./Constants.tsx";
 
 export const initialState = {
     token: null,

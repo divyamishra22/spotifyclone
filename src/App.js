@@ -4,33 +4,36 @@ import { Login } from './components/Login.tsx';
 import { useEffect } from 'react';
 import { Body } from './components/Body.tsx';
 import { useStateProvider } from './contextapi/Stateprovider.tsx';
+import { Firebasedb } from './Firebasedb.jsx';
+
+
 
 function App() {
 
-  const [{ token }, dispatch] = useStateProvider();
+  // const [{ token }, dispatch] = useStateProvider();
   
-  useEffect(()=>{
+  // useEffect(()=>{
 
-    const hash = window.location.hash;
-    if(hash){
-    const token =  hash.substring(1).split("&")[0].split("=")[1];
+  //   const hash = window.location.hash;
+  //   if(hash){
+  //   const token =  hash.substring(1).split("&")[0].split("=")[1];
     
-    if(token)
-    {
-      console.log(token);
-    }
+  //   if(token)
+  //   {
+  //     console.log(token);
+  //   }
     
-    }
+  //   }
 
-  },[token,dispatch])
+  // },[token,dispatch])
    
   return (
     <>
-    <div className="App">
     {/* {token? "": <Login/>} */}
-    <Login/>
-    <Body/>
-    </div>
+    {/* <Login/>
+    <Body/> */}
+    <Firebasedb/>
+    
     </>
   );
 }

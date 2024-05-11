@@ -46,8 +46,15 @@ export const Body = () => {
              dispatch, 
             selectedPlaylistId]);
 
+
+            const playTrack = async() =>{
+
+            }
+
     
   return (
+   
     <div>Body</div>
+ 
   )
 }
